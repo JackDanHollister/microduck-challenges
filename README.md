@@ -45,6 +45,33 @@ the same for every entrant. Say why each seed of a policy ended with
 `uv run --frozen --group workshop python -m microduck_challenges.sock_heist_6m.check policy.onnx [--speed V] [--seeds N]`.
 The recipe starts the learner as the reference walker.
 
+## My runs so far
+
+I'm using this fork to have a play with Microduck training and keep the bits
+I build along the way. I've started with Pollen's baseline recipes and put
+entries into three of the Arena games.
+
+These are my official Arena times from **2 November 2026**, entered as **JackDH**:
+
+| Event | Mean time | Finishes | Model and checkpoint | Arena replay |
+|---|---:|---:|---|---|
+| Sprint 2 m | 4.986 s | 5/5 | [Checkpoint 1000](https://huggingface.co/JackDH/microduck-sprint-20261102-best) | [Watch](https://huggingface.co/spaces/pollen-robotics/microduck-arena#/r/01M6EK4CAGVZRN8RMTBRWQ) |
+| Sock Heist 6 m | 11.871 s | 5/5 | [Checkpoint 999](https://huggingface.co/JackDH/microduck-sock-heist-20261102-seed1) | [Watch](https://huggingface.co/spaces/pollen-robotics/microduck-arena#/r/01M6EK6ARHWNMG4RRT81JN) |
+| Hill Climb 1.5 m | 5.867 s | 5/5 | [Checkpoint 1000](https://huggingface.co/JackDH/microduck-hill-climb-20261102-best) | [Watch](https://huggingface.co/spaces/pollen-robotics/microduck-arena#/r/01M6EK7KYEEZF042FG1XRQ) |
+
+I ran these on an RTX 4090, with 4096 parallel environments and training seed 1.
+Sprint and Hill ran for 3000 iterations; Sock Heist ran for 1000. I compared
+the saved checkpoints and uploaded the best from each run.
+
+The code is Pollen's baseline at
+[`5cee942d8`](https://github.com/JackDanHollister/microduck-challenges/tree/5cee942d8b434aafd395070facb659034aac3b5e).
+I've put [my setup and the training commands here](experiments/README.md) if
+you want to try the same runs. The model links include `policy.onnx` and the
+full selected `checkpoint.pt`.
+
+Everything here has been tested in simulation so far. Hardware testing is next
+once I have the robot.
+
 ## The workshop
 
 Each challenge's page on the Arena has a **Train my own robot** button with one line to copy:

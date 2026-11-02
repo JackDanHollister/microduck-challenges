@@ -1,0 +1,691 @@
+{
+  "date": "2026-11-02",
+  "generated_utc": "2026-11-02T17:05:52.527380+00:00",
+  "source_commit": "5cee942d8b434aafd395070facb659034aac3b5e",
+  "training_base_commit": "1efd853be9fcdf050da24b5723cb74ada9a731d7",
+  "arena_version": "0.7.0",
+  "host_gpu": "RTX 4090",
+  "scope": "November 2 local Workshop experiments, with three official public Arena entries. Simulation only; no hardware validation.",
+  "runs": [
+    {
+      "name": "sprint-baseline-20261102",
+      "event": "sprint-2m",
+      "task": "Mjlab-Sprint2m-MicroDuck",
+      "state": "completed",
+      "run": "logs/rsl_rl/sprint_2m/2026-11-02_09-30-24_sprint-baseline-20261102",
+      "source_commit": "5cee942d8b434aafd395070facb659034aac3b5e",
+      "recipe": {
+        "num_envs": 4096,
+        "max_iterations": 3000,
+        "seed": 1
+      },
+      "params": {
+        "forward_reward": 2.0,
+        "upright_reward": 2.0,
+        "step_reward": 3.0
+      },
+      "best": {
+        "n": 1000,
+        "status": "evaluated",
+        "score": 4.986,
+        "seeds_finished": 5,
+        "seeds_total": 5,
+        "command_vx": 0.5
+      },
+      "checkpoints": [
+        {
+          "n": 0,
+          "status": "evaluated",
+          "score": 50.0,
+          "seeds_finished": 0,
+          "seeds_total": 5,
+          "command_vx": 0.6
+        },
+        {
+          "n": 250,
+          "status": "evaluated",
+          "score": 35.006,
+          "seeds_finished": 4,
+          "seeds_total": 5,
+          "command_vx": 0.85
+        },
+        {
+          "n": 500,
+          "status": "evaluated",
+          "score": 9.575,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.35
+        },
+        {
+          "n": 750,
+          "status": "evaluated",
+          "score": 5.523,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.5
+        },
+        {
+          "n": 1000,
+          "status": "evaluated",
+          "score": 4.986,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.5
+        },
+        {
+          "n": 1250,
+          "status": "evaluated",
+          "score": 5.071,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.5
+        },
+        {
+          "n": 1500,
+          "status": "evaluated",
+          "score": 5.142,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.55
+        },
+        {
+          "n": 1750,
+          "status": "evaluated",
+          "score": 5.551,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.5
+        },
+        {
+          "n": 2000,
+          "status": "evaluated",
+          "score": 5.548,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.5
+        },
+        {
+          "n": 2250,
+          "status": "evaluated",
+          "score": 5.354,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.5
+        },
+        {
+          "n": 2500,
+          "status": "evaluated",
+          "score": 5.647,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.5
+        },
+        {
+          "n": 2750,
+          "status": "evaluated",
+          "score": 5.204,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.55
+        },
+        {
+          "n": 2999,
+          "status": "evaluated",
+          "score": 5.231,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.55
+        }
+      ],
+      "note": ""
+    },
+    {
+      "name": "sprint-upright3-20261102",
+      "event": "sprint-2m",
+      "task": "Mjlab-Sprint2m-MicroDuck",
+      "state": "completed",
+      "run": "logs/rsl_rl/sprint_2m/2026-11-02_10-28-08_sprint-upright3-20261102",
+      "source_commit": "5cee942d8b434aafd395070facb659034aac3b5e",
+      "recipe": {
+        "num_envs": 4096,
+        "max_iterations": 501,
+        "seed": 1
+      },
+      "params": {
+        "forward_reward": 2.0,
+        "upright_reward": 3.0,
+        "step_reward": 3.0
+      },
+      "best": {
+        "n": 500,
+        "status": "evaluated",
+        "score": 18.45,
+        "seeds_finished": 4,
+        "seeds_total": 5,
+        "command_vx": 0.2
+      },
+      "checkpoints": [
+        {
+          "n": 0,
+          "status": "evaluated",
+          "score": 50.0,
+          "seeds_finished": 0,
+          "seeds_total": 5,
+          "command_vx": 0.5
+        },
+        {
+          "n": 250,
+          "status": "evaluated",
+          "score": 50.0,
+          "seeds_finished": 0,
+          "seeds_total": 5,
+          "command_vx": 0.2
+        },
+        {
+          "n": 500,
+          "status": "evaluated",
+          "score": 18.45,
+          "seeds_finished": 4,
+          "seeds_total": 5,
+          "command_vx": 0.2
+        }
+      ],
+      "note": "Only upright reward changes from 2 to 3, via CLI override. Early 501-iteration comparison, not a full-budget winner test."
+    },
+    {
+      "name": "sock-baseline-20261102",
+      "event": "sock-heist-6m",
+      "task": "Mjlab-SockHeist6m-MicroDuck",
+      "state": "completed",
+      "run": "logs/rsl_rl/sock_heist_6m/2026-11-02_13-18-37_sock-baseline-20261102",
+      "source_commit": "5cee942d8b434aafd395070facb659034aac3b5e",
+      "recipe": {
+        "num_envs": 4096,
+        "max_iterations": 1000,
+        "seed": 1
+      },
+      "params": {
+        "forward_reward": 2.0,
+        "progress_reward": 8.0,
+        "freeze_reward": 2.0,
+        "upright_reward": 2.0,
+        "step_reward": 3.0
+      },
+      "best": {
+        "n": 999,
+        "status": "evaluated",
+        "score": 11.871,
+        "seeds_finished": 5,
+        "seeds_total": 5,
+        "command_vx": 1.2
+      },
+      "checkpoints": [
+        {
+          "n": 0,
+          "status": "evaluated",
+          "score": 40.0,
+          "seeds_finished": 0,
+          "seeds_total": 5,
+          "command_vx": 0.45
+        },
+        {
+          "n": 100,
+          "status": "evaluated",
+          "score": 24.122,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 1.15
+        },
+        {
+          "n": 200,
+          "status": "evaluated",
+          "score": 18.997,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 1.0
+        },
+        {
+          "n": 300,
+          "status": "evaluated",
+          "score": 16.822,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 1.2
+        },
+        {
+          "n": 400,
+          "status": "evaluated",
+          "score": 16.247999999999998,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 1.15
+        },
+        {
+          "n": 500,
+          "status": "evaluated",
+          "score": 15.996,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 1.2
+        },
+        {
+          "n": 600,
+          "status": "evaluated",
+          "score": 15.131,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 1.2
+        },
+        {
+          "n": 700,
+          "status": "evaluated",
+          "score": 13.261000000000001,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 1.2
+        },
+        {
+          "n": 800,
+          "status": "evaluated",
+          "score": 13.007,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 1.2
+        },
+        {
+          "n": 900,
+          "status": "evaluated",
+          "score": 12.107,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 1.2
+        },
+        {
+          "n": 999,
+          "status": "evaluated",
+          "score": 11.871,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 1.2
+        }
+      ],
+      "note": "",
+      "diagnostic_25_trials": "finished 25/25 \u00b7 caught 0 (early 0) \u00b7 fell 0 (on a stop 0, on a start 0) \u00b7 out of time 0 (never left the line 0) \u00b7 mean 11.66 s"
+    },
+    {
+      "name": "sock-seed2-20261102",
+      "event": "sock-heist-6m",
+      "task": "Mjlab-SockHeist6m-MicroDuck",
+      "state": "completed",
+      "run": "logs/rsl_rl/sock_heist_6m/2026-11-02_14-36-13_sock-seed2-20261102",
+      "source_commit": "5cee942d8b434aafd395070facb659034aac3b5e",
+      "recipe": {
+        "num_envs": 4096,
+        "max_iterations": 1000,
+        "seed": 2
+      },
+      "params": {
+        "forward_reward": 2.0,
+        "progress_reward": 8.0,
+        "freeze_reward": 2.0,
+        "upright_reward": 2.0,
+        "step_reward": 3.0
+      },
+      "best": {
+        "n": 900,
+        "status": "evaluated",
+        "score": 13.059999999999999,
+        "seeds_finished": 5,
+        "seeds_total": 5,
+        "command_vx": 1.2
+      },
+      "checkpoints": [
+        {
+          "n": 0,
+          "status": "evaluated",
+          "score": 40.0,
+          "seeds_finished": 0,
+          "seeds_total": 5,
+          "command_vx": 0.75
+        },
+        {
+          "n": 100,
+          "status": "evaluated",
+          "score": 24.589000000000002,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 1.2
+        },
+        {
+          "n": 200,
+          "status": "evaluated",
+          "score": 19.193,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 1.1
+        },
+        {
+          "n": 300,
+          "status": "evaluated",
+          "score": 16.952,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 1.2
+        },
+        {
+          "n": 400,
+          "status": "evaluated",
+          "score": 15.547,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 1.2
+        },
+        {
+          "n": 500,
+          "status": "evaluated",
+          "score": 15.291,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 1.2
+        },
+        {
+          "n": 600,
+          "status": "evaluated",
+          "score": 13.580000000000002,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 1.2
+        },
+        {
+          "n": 700,
+          "status": "evaluated",
+          "score": 13.27,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 1.2
+        },
+        {
+          "n": 800,
+          "status": "evaluated",
+          "score": 13.23,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 1.2
+        },
+        {
+          "n": 900,
+          "status": "evaluated",
+          "score": 13.059999999999999,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 1.2
+        },
+        {
+          "n": 999,
+          "status": "evaluated",
+          "score": 13.072,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 1.2
+        }
+      ],
+      "note": "Only training seed changes from 1 to 2; identical rewards and physics.",
+      "diagnostic_25_trials": "finished 25/25 \u00b7 caught 0 (early 0) \u00b7 fell 0 (on a stop 0, on a start 0) \u00b7 out of time 0 (never left the line 0) \u00b7 mean 13.10 s"
+    },
+    {
+      "name": "hill-baseline-20261102",
+      "event": "hill-climb-1m5",
+      "task": "Mjlab-HillClimb1m5-MicroDuck",
+      "state": "completed",
+      "run": "logs/rsl_rl/hill_climb_1m5/2026-11-02_14-58-20_hill-baseline-20261102",
+      "source_commit": "5cee942d8b434aafd395070facb659034aac3b5e",
+      "recipe": {
+        "num_envs": 4096,
+        "max_iterations": 3000,
+        "seed": 1
+      },
+      "params": {
+        "forward_reward": 2.0,
+        "upright_reward": 2.0,
+        "step_reward": 3.0,
+        "max_slope_deg": 10.0
+      },
+      "best": {
+        "n": 1000,
+        "status": "evaluated",
+        "score": 5.867,
+        "seeds_finished": 5,
+        "seeds_total": 5,
+        "command_vx": 0.55
+      },
+      "checkpoints": [
+        {
+          "n": 0,
+          "status": "evaluated",
+          "score": 60.0,
+          "seeds_finished": 0,
+          "seeds_total": 5,
+          "command_vx": 0.15
+        },
+        {
+          "n": 250,
+          "status": "evaluated",
+          "score": 60.0,
+          "seeds_finished": 0,
+          "seeds_total": 5,
+          "command_vx": 0.15
+        },
+        {
+          "n": 500,
+          "status": "evaluated",
+          "score": 10.171000000000001,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.55
+        },
+        {
+          "n": 750,
+          "status": "evaluated",
+          "score": 16.750999999999998,
+          "seeds_finished": 4,
+          "seeds_total": 5,
+          "command_vx": 0.55
+        },
+        {
+          "n": 1000,
+          "status": "evaluated",
+          "score": 5.867,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.55
+        },
+        {
+          "n": 1250,
+          "status": "evaluated",
+          "score": 7.17,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.45
+        },
+        {
+          "n": 1500,
+          "status": "evaluated",
+          "score": 6.906999999999999,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.55
+        },
+        {
+          "n": 1750,
+          "status": "evaluated",
+          "score": 6.875,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.55
+        },
+        {
+          "n": 2000,
+          "status": "evaluated",
+          "score": 6.638,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.55
+        },
+        {
+          "n": 2250,
+          "status": "evaluated",
+          "score": 8.96,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.65
+        },
+        {
+          "n": 2500,
+          "status": "evaluated",
+          "score": 7.444,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.55
+        },
+        {
+          "n": 2750,
+          "status": "evaluated",
+          "score": 7.897,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.6
+        },
+        {
+          "n": 2999,
+          "status": "evaluated",
+          "score": 6.243,
+          "seeds_finished": 5,
+          "seeds_total": 5,
+          "command_vx": 0.55
+        }
+      ],
+      "note": "",
+      "checked": "2026-11-02T16:12:19.180142+00:00",
+      "progress": {
+        "done": 1919,
+        "total": 3000
+      }
+    }
+  ],
+  "validation": {
+    "supplied_tests_passed": 181,
+    "supplied_tests_failed": 1,
+    "known_failure": "test_the_walker_walks_in_the_training_env: 0.29952 m against >0.3 m at 150 steps; extended walking/standing controls passed.",
+    "best_exports": "Normalized ONNXs compared with full PyTorch actors over 128 inputs each; errors below 1e-6 for completed baseline policies."
+  },
+  "references": {
+    "sprint_2m": {
+      "score": 4.886,
+      "finishes": "5/5",
+      "checkpoint": 1000
+    },
+    "sock_heist_6m": {
+      "score": 16.982,
+      "finishes": "5/5",
+      "checkpoint": 300
+    },
+    "hill_climb_1m5": {
+      "score": 5.87,
+      "finishes": "5/5",
+      "checkpoint": 1000
+    }
+  },
+  "upload_plan": [
+    {
+      "repo": "JackDH/microduck-sprint-20261102-best",
+      "name": "sprint-best-20261102",
+      "run": "logs/rsl_rl/sprint_2m/2026-11-02_09-30-24_sprint-baseline-20261102",
+      "checkpoint": 1000,
+      "task": "Mjlab-Sprint2m-MicroDuck",
+      "private": true,
+      "enter_arena": false,
+      "description": "sprint-2m local training, sprint-baseline-20261102, checkpoint 1000."
+    },
+    {
+      "repo": "JackDH/microduck-sock-heist-20261102-seed1",
+      "name": "sock-seed1-20261102",
+      "run": "logs/rsl_rl/sock_heist_6m/2026-11-02_13-18-37_sock-baseline-20261102",
+      "checkpoint": 999,
+      "task": "Mjlab-SockHeist6m-MicroDuck",
+      "private": true,
+      "enter_arena": false,
+      "description": "sock-heist-6m local training, sock-baseline-20261102, checkpoint 999."
+    },
+    {
+      "repo": "JackDH/microduck-sock-heist-20261102-seed2",
+      "name": "sock-seed2-20261102",
+      "run": "logs/rsl_rl/sock_heist_6m/2026-11-02_14-36-13_sock-seed2-20261102",
+      "checkpoint": 900,
+      "task": "Mjlab-SockHeist6m-MicroDuck",
+      "private": true,
+      "enter_arena": false,
+      "description": "sock-heist-6m local training, sock-seed2-20261102, checkpoint 900."
+    }
+  ],
+  "upload_plan_status": "Historical private-backup plan, superseded by the public Arena publications below; not used for these entries.",
+  "publications": [
+    {
+      "event": "sprint-2m",
+      "repo": "JackDH/microduck-sprint-20261102-best",
+      "revision": "6bb91ae28977d595788aa0738330b861c3b07a7d",
+      "checkpoint": 1000,
+      "policy_sha256": "47a7ada9789d9a7b2c4ba0d84febd83a726776678d715790ed899774c616bcc2",
+      "private": false,
+      "entry": {
+        "run_id": "01M6EK4CAGVZRN8RMTBRWQ",
+        "score": 4.986,
+        "seeds_finished": 5,
+        "seeds_total": 5,
+        "command_vx": 0.5,
+        "page_url": "https://huggingface.co/spaces/pollen-robotics/microduck-arena#/r/01M6EK4CAGVZRN8RMTBRWQ",
+        "already": false,
+        "course": "lane",
+        "metric": "mean_finish_time"
+      }
+    },
+    {
+      "event": "sock-heist-6m",
+      "repo": "JackDH/microduck-sock-heist-20261102-seed1",
+      "revision": "620141bc17573800cd94224c60f92bb5ae7a28dd",
+      "checkpoint": 999,
+      "policy_sha256": "b49caf8b511481e071c6980034028ab2a7e1db2d69ba78b9cc2fedd8b1d22f18",
+      "private": false,
+      "entry": {
+        "run_id": "01M6EK6ARHWNMG4RRT81JN",
+        "score": 11.871,
+        "seeds_finished": 5,
+        "seeds_total": 5,
+        "command_vx": 1.2,
+        "page_url": "https://huggingface.co/spaces/pollen-robotics/microduck-arena#/r/01M6EK6ARHWNMG4RRT81JN",
+        "already": false,
+        "course": "lane",
+        "metric": "mean_finish_time"
+      }
+    },
+    {
+      "event": "hill-climb-1m5",
+      "repo": "JackDH/microduck-hill-climb-20261102-best",
+      "revision": "046481288c613b3b2ae8eeb49e87c6d3279034d4",
+      "checkpoint": 1000,
+      "policy_sha256": "31e05de7f38f7a9ae1ca18936e834b9fb9959e3eba684a2c67a2558450bdf510",
+      "private": false,
+      "entry": {
+        "run_id": "01M6EK7KYEEZF042FG1XRQ",
+        "score": 5.867,
+        "seeds_finished": 5,
+        "seeds_total": 5,
+        "command_vx": 0.55,
+        "page_url": "https://huggingface.co/spaces/pollen-robotics/microduck-arena#/r/01M6EK7KYEEZF042FG1XRQ",
+        "already": false,
+        "course": "lane",
+        "metric": "mean_finish_time"
+      }
+    }
+  ]
+}
