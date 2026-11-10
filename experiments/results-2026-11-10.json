@@ -1,0 +1,104 @@
+{
+  "entrant": "JackDH",
+  "entries": [
+    {
+      "event": "roller-sprint-2m",
+      "task": "Mjlab-RollerSprint2m-MicroDuck",
+      "training_seed": 1,
+      "num_envs": 4096,
+      "iterations": 3000,
+      "checkpoint": 500,
+      "training_source": "https://github.com/JackDanHollister/microduck-challenges/tree/c0a75ceff2e23eba90ff651a715e6ecd230abf75",
+      "model_repo": "https://huggingface.co/JackDH/microduck-roller-sprint-20261110-best",
+      "model_revision": "43e9b57825fbfe08cf4b510368b643ff9ae47d93",
+      "policy_sha256": "0b724f5cebe7f50815f6dd9631009e47c4b0a607f81b22d0f4048ffd6d5a77d6",
+      "arena_replay": "https://huggingface.co/spaces/pollen-robotics/microduck-arena#/r/01M72WA65TCS7STJFS7QAX",
+      "arena_run_id": "01M72WA65TCS7STJFS7QAX",
+      "submitted_at": "2026-11-10T14:03:10Z",
+      "metric": "mean_finish_time",
+      "score": 2.993,
+      "command_vx": 0.8,
+      "seeds_finished": 5,
+      "seeds_total": 5,
+      "per_seed": [
+        {
+          "seed": 1,
+          "status": "finish",
+          "time_s": 2.995
+        },
+        {
+          "seed": 2,
+          "status": "finish",
+          "time_s": 2.98
+        },
+        {
+          "seed": 3,
+          "status": "finish",
+          "time_s": 3.0100000000000002
+        },
+        {
+          "seed": 4,
+          "status": "finish",
+          "time_s": 3.0100000000000002
+        },
+        {
+          "seed": 5,
+          "status": "finish",
+          "time_s": 2.97
+        }
+      ]
+    },
+    {
+      "event": "tug-of-war",
+      "task": "Mjlab-TugOfWar-MicroDuck",
+      "training_seed": 1,
+      "num_envs": 4096,
+      "iterations": 1000,
+      "checkpoint": 250,
+      "training_source": "https://github.com/JackDanHollister/microduck-challenges/tree/c0a75ceff2e23eba90ff651a715e6ecd230abf75",
+      "model_repo": "https://huggingface.co/JackDH/microduck-tug-upright-20261106-best",
+      "model_revision": "07905e23086dddbce87a3ee56f933a5e6041b379",
+      "policy_sha256": "38c53a30456feb6b2a1aa7d0f7b62738b46e6f2a3de2c16dadf028e357155050",
+      "arena_replay": "https://huggingface.co/spaces/pollen-robotics/microduck-arena#/r/01M72WC88AFDCS40P8WJJD",
+      "arena_run_id": "01M72WC88AFDCS40P8WJJD",
+      "submitted_at": "2026-11-10T14:04:18Z",
+      "metric": "mean_ground_cm",
+      "score": 142.1172660589218,
+      "command_vx": -0.3,
+      "seeds_finished": 5,
+      "seeds_total": 5,
+      "per_seed": [
+        {
+          "seed": 1,
+          "status": "pit_won",
+          "time_s": 4.72,
+          "score_cm": 142.5696074962616
+        },
+        {
+          "seed": 2,
+          "status": "pit_won",
+          "time_s": 4.22,
+          "score_cm": 141.8318271636963
+        },
+        {
+          "seed": 3,
+          "status": "pit_won",
+          "time_s": 3.84,
+          "score_cm": 143.00217032432556
+        },
+        {
+          "seed": 4,
+          "status": "pit_won",
+          "time_s": 3.94,
+          "score_cm": 143.80851686000824
+        },
+        {
+          "seed": 5,
+          "status": "pit_won",
+          "time_s": 4.18,
+          "score_cm": 139.37420845031738
+        }
+      ]
+    }
+  ]
+}

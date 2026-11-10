@@ -1,8 +1,9 @@
 # My training setup
 
 I started with Pollen's baseline recipes to get the setup working and enter
-Sprint, Sock Heist and Hill Climb. The [main README](../README.md#my-runs-so-far)
-has my official times, model downloads and Arena replays from 2 November 2026.
+Sprint, Sock Heist and Hill Climb. I then tried Roller Sprint and changed the
+upright reward for Tug of War. The [main README](../README.md#my-runs-so-far)
+has all five official results, models and replays.
 
 Here's the setup and the commands I used if you want to try the same runs.
 
@@ -10,7 +11,7 @@ Here's the setup and the commands I used if you want to try the same runs.
 
 - Linux x86_64 workstation, NVIDIA RTX 4090 with 24 GB VRAM.
 - Python 3.12.14 and uv 0.12.7.
-- Training source commit: `5cee942d8b434aafd395070facb659034aac3b5e`.
+- Training source for the first three events: `5cee942d8b434aafd395070facb659034aac3b5e`.
 - Locked mjlab-microduck base: `1efd853be9fcdf050da24b5723cb74ada9a731d7`;
   Arena/Workshop 0.7.0. The repository's `uv.lock` pins the dependencies.
 - 4096 parallel environments, training seed 1, TensorBoard logging.
@@ -30,7 +31,7 @@ That commit is from before I added these notes. I also had ROS packages in
 `PYTHONPATH`; if you have the same setup, put `env -u PYTHONPATH` before `uv`
 in the commands below to avoid Python conflicts.
 
-## Training the three events
+## Sprint, Sock Heist and Hill Climb
 
 These are the settings I used. Run one command at a time:
 
@@ -57,6 +58,38 @@ The settings and environment code for each event are here:
 - [Sprint](../src/microduck_challenges/sprint_2m): `env.py` and `challenge.toml`.
 - [Sock Heist](../src/microduck_challenges/sock_heist_6m): `env.py` and `challenge.toml`.
 - [Hill Climb](../src/microduck_challenges/hill_climb_1m5): `env.py` and `challenge.toml`.
+
+## Roller Sprint and Tug of War
+
+I used [this revision of the fork](https://github.com/JackDanHollister/microduck-challenges/tree/c0a75ceff2e23eba90ff651a715e6ecd230abf75)
+for both runs. From the clone above, these are the commands:
+
+```bash
+git checkout c0a75ceff2e23eba90ff651a715e6ecd230abf75
+uv sync --locked --group workshop
+
+uv run --frozen train Mjlab-RollerSprint2m-MicroDuck --env.scene.num-envs 4096 \
+    --agent.max-iterations 3000 --agent.seed 1 --agent.logger tensorboard \
+    --agent.run-name roller-baseline-20261110
+
+uv run --frozen train Mjlab-TugOfWar-MicroDuck --env.scene.num-envs 4096 \
+    --agent.max-iterations 1000 --agent.seed 1 --agent.logger tensorboard \
+    --agent.run-name run-1106-1103
+```
+
+**Roller Sprint:** I left the [roller settings](../src/microduck_challenges/roller_sprint_2m/challenge.toml)
+alone. Checkpoint 500 averaged 2.993 s across five races at the Arena's
+chosen forward command of 0.8 m/s. Pollen's reference did 3.132 s on my
+machine. The last checkpoint (2999) missed all five finishes.
+
+**Tug of War:** In the [Tug settings](../src/microduck_challenges/tug_of_war/challenge.toml)
+I set **Win ground** to 2.625 and **Stay upright** to 2.0. Checkpoint 250
+won all five bouts by pulling the reference duck into the pit, in 3.84–4.72 s.
+The official score is **+142.117 cm** of ground gained, not the time.
+
+The [results for 10 November](results-2026-11-10.json) include every official
+attempt and the exact model revisions. Both public policies and checkpoints
+match the files I scored in the Workshop.
 
 ## Watching the runs
 
@@ -92,7 +125,7 @@ videos into Git.
 - The supplied test suite: 181 passed, one marginal walker-distance assertion
   failed (0.29952 m against a strict 0.3 m cutoff after 150 steps). Extended
   walking/standing checks and two-environment CPU training smokes passed.
-- All three submitted exports passed shape/finite-output checks and matched
+- The three 2 November exports passed shape/finite-output checks and matched
   their normalized PyTorch actors over 128 inputs each, with maximum errors
   below 1e-6. Fresh publication exports were byte-identical to evaluated ones.
 

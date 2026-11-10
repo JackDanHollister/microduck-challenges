@@ -49,25 +49,28 @@ The recipe starts the learner as the reference walker.
 
 I'm using this fork to have a play with Microduck training and keep the bits
 I build along the way. I've started with Pollen's baseline recipes and put
-entries into three of the Arena games.
+entries into five of the Arena games.
 
-These are my official Arena times from **2 November 2026**, entered as **JackDH**:
+These are my official results as **JackDH**. I entered the first three on
+2 November 2026 and Roller Sprint and Tug of War on 10 November.
 
-| Event | Mean time | Finishes | Model and checkpoint | Arena replay |
-|---|---:|---:|---|---|
-| Sprint 2 m | 4.986 s | 5/5 | [Checkpoint 1000](https://huggingface.co/JackDH/microduck-sprint-20261102-best) | [Watch](https://huggingface.co/spaces/pollen-robotics/microduck-arena#/r/01M6EK4CAGVZRN8RMTBRWQ) |
-| Sock Heist 6 m | 11.871 s | 5/5 | [Checkpoint 999](https://huggingface.co/JackDH/microduck-sock-heist-20261102-seed1) | [Watch](https://huggingface.co/spaces/pollen-robotics/microduck-arena#/r/01M6EK6ARHWNMG4RRT81JN) |
-| Hill Climb 1.5 m | 5.867 s | 5/5 | [Checkpoint 1000](https://huggingface.co/JackDH/microduck-hill-climb-20261102-best) | [Watch](https://huggingface.co/spaces/pollen-robotics/microduck-arena#/r/01M6EK7KYEEZF042FG1XRQ) |
+| Event | Arena result | Five attempts | Model and checkpoint | Arena replay |
+|---|---:|---|---|---|
+| Sprint 2 m | 4.986 s | 5 finishes | [Checkpoint 1000](https://huggingface.co/JackDH/microduck-sprint-20261102-best) | [Watch](https://huggingface.co/spaces/pollen-robotics/microduck-arena#/r/01M6EK4CAGVZRN8RMTBRWQ) |
+| Sock Heist 6 m | 11.871 s | 5 finishes | [Checkpoint 999](https://huggingface.co/JackDH/microduck-sock-heist-20261102-seed1) | [Watch](https://huggingface.co/spaces/pollen-robotics/microduck-arena#/r/01M6EK6ARHWNMG4RRT81JN) |
+| Hill Climb 1.5 m | 5.867 s | 5 finishes | [Checkpoint 1000](https://huggingface.co/JackDH/microduck-hill-climb-20261102-best) | [Watch](https://huggingface.co/spaces/pollen-robotics/microduck-arena#/r/01M6EK7KYEEZF042FG1XRQ) |
+| Roller Sprint 2 m | 2.993 s | 5 finishes | [Checkpoint 500](https://huggingface.co/JackDH/microduck-roller-sprint-20261110-best) | [Watch](https://huggingface.co/spaces/pollen-robotics/microduck-arena#/r/01M72WA65TCS7STJFS7QAX) |
+| Tug of War | +142.117 cm | 5 pit wins | [Checkpoint 250](https://huggingface.co/JackDH/microduck-tug-upright-20261106-best) | [Watch](https://huggingface.co/spaces/pollen-robotics/microduck-arena#/r/01M72WC88AFDCS40P8WJJD) |
 
-I ran these on an RTX 4090, with 4096 parallel environments and training seed 1.
-Sprint and Hill ran for 3000 iterations; Sock Heist ran for 1000. I compared
-the saved checkpoints and uploaded the best from each run.
+I trained on an RTX 4090 with 4096 parallel environments and seed 1. The four
+races are timed; Tug measures how far I pulled the marker against Pollen's
+reference duck. That score is the average across five bouts.
 
-The code is Pollen's baseline at
-[`5cee942d8`](https://github.com/JackDanHollister/microduck-challenges/tree/5cee942d8b434aafd395070facb659034aac3b5e).
-I've put [my setup and the training commands here](experiments/README.md) if
-you want to try the same runs. The model links include `policy.onnx` and the
-full selected `checkpoint.pt`.
+For Roller Sprint I kept Pollen's stock recipe. Checkpoint 500 finished every
+race, but the last one didn't finish any. For Tug I turned up the reward for
+staying upright. [My setup and commands](experiments/README.md) include the
+exact code for both batches. The model links have the full checkpoints as well
+as the policies you can replay.
 
 Everything here has been tested in simulation so far. Hardware testing is next
 once I have the robot.
