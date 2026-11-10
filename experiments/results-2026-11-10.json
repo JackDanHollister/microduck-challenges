@@ -99,6 +99,26 @@
           "score_cm": 139.37420845031738
         }
       ]
+    },
+    {
+      "event": "got-a-talent",
+      "performance": "Crown Roll",
+      "training_method": "episodic cross-entropy search",
+      "training_folder": "crown-roll/training",
+      "model_repo": "https://huggingface.co/JackDH/microduck-crown-roll",
+      "model_revision": "740da39da8a8436ae1d01daab502a37f14ae0838",
+      "policy_sha256": "3facb7619e635c98964a636bd7636960ec20629bd5dd52d951f94f5c148b89cd",
+      "arena_replay": "https://huggingface.co/spaces/pollen-robotics/microduck-arena#/r/01M735W7J7182FS4RY6JDN",
+      "arena_run_id": "01M735W7J7182FS4RY6JDN",
+      "submitted_at": "2026-11-10T16:50:19Z",
+      "metric": "votes",
+      "duration_s": 3.48,
+      "local_landing_test": {
+        "passed": 62,
+        "total": 64,
+        "feedback_off_passed": 58,
+        "results": "crown-roll/assessment.json"
+      }
     }
   ]
 }

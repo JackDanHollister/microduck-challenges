@@ -1,0 +1,35 @@
+{
+  "schema_version": 2,
+  "model_api": 1,
+  "name": "Crown Roll",
+  "kind": "perpetual",
+  "obs_len": 61,
+  "action_len": 14,
+  "entry_pose": "standing",
+  "robot": {
+    "model": "microduck",
+    "hw_rev": 1,
+    "servos": "xl330",
+    "control_hz": 50,
+    "accessories": [
+      "rollers"
+    ]
+  },
+  "description": "I trained my Microduck to skate into a forward roll over its head, land on both skates and keep rolling.",
+  "arena": {
+    "event": "got-a-talent"
+  },
+  "duration_s": null,
+  "command": {
+    "encoding": "timeline",
+    "twist": "forward speed in m/s",
+    "body": "last coordinate gives the roll frame in sixteenths; zero selects skating"
+  },
+  "training": {
+    "method": "episodic cross-entropy search on sensor feedback, initialised from the trained roll",
+    "parameter_count": 12,
+    "seed": 292507,
+    "task_id": "got-a-talent",
+    "source_file": "checkpoint.json"
+  }
+}

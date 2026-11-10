@@ -3,7 +3,7 @@
 I started with Pollen's baseline recipes to get the setup working and enter
 Sprint, Sock Heist and Hill Climb. I then tried Roller Sprint and changed the
 upright reward for Tug of War. The [main README](../README.md#my-runs-so-far)
-has all five official results, models and replays.
+has all six official entries, models and replays.
 
 Here's the setup and the commands I used if you want to try the same runs.
 
@@ -90,6 +90,12 @@ The official score is **+142.117 cm** of ground gained, not the time.
 The [results for 10 November](results-2026-11-10.json) include every official
 attempt and the exact model revisions. Both public policies and checkpoints
 match the files I scored in the Workshop.
+
+## Crown Roll
+
+For Got a Talent I used my Roller Sprint model for the skating and trained
+the landing on the CPU. The experiment folder has the commands to retrain
+the feedback or rebuild the exact policy I entered. [Crown Roll](crown-roll/)
 
 ## Watching the runs
 
